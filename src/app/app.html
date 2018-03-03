@@ -1,0 +1,24 @@
+<ion-menu [content]="content">
+  <ion-header class="cardlogo">
+    <!-- <ion-toolbar>
+      <ion-title>Menu</ion-title>
+      
+    </ion-toolbar> -->
+    <!-- <ion-card > -->
+      <img src="http://nebula.wsimg.com/4bc11e051bca7e93a282465df6a72bf6?AccessKeyId=E6F184CA5BC264C65042&disposition=0&alloworigin=1" class="logo">
+      
+    <!-- </ion-card> -->
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p.title)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

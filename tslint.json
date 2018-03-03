@@ -1,0 +1,5 @@
+{
+  "tslint.enable": true,
+  "rulesDirectory": ["node_modules/codelyzer"],
+  "extends": ["tslint-config-prettier"]
+}
